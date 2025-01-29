@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <script>
+        let sequence = [];
+        const expectedSequence = ['8', '8', '8', '8', 'c', 'c'];
+        document.addEventListener('keydown', (event) => {
+            sequence.push(event.key);
+            if (sequence.length > expectedSequence.length) {
+                sequence.shift(); // Keep only the last six keys
+            }
+            if (sequence.join('') === expectedSequence.join('')) {
+                window.location.href = "https://sites.google.com/d/1akadvNvoXfQKS1-YlVzaLYSjyqgr1o2n/p/1u1W5UZ7lQAIU4CNcllCulYnK_MLICnX-/edit";
+            }
+        });
+    </script>
+</head>
+<body>
+    <h1>Welcome</h1>
+</body>
+</html>
